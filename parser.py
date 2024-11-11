@@ -3,9 +3,9 @@ import argparse
 
 def parameter_parser():
     # Experiment parameters
-    parser = argparse.ArgumentParser(description='Smart contract vulnerability detection based on graph neural network')
-    parser.add_argument('-D', '--dataset', type=str, default='REENTRANCY_1671',
-                        choices=[ 'REENTRANCY_1671'])
+    parser = argparse.ArgumentParser(description='VD-GAB: A Smart Contract Reentrancy Vulnerability Detection Method based on Graph Convolutional Networks and Improved Bidirectional Long Short-term Memory Networks')
+    parser.add_argument('-D', '--dataset', type=str, default='REENTRANCY',
+                        choices=[ 'REENTRANCY'])
     parser.add_argument('-M', '--model', type=str, default='gcn_bilstm',
                         choices=[ 'gat', 'gcn_origin', 'gcn_bilstm' ])
     parser.add_argument('--lr', type=float, default=0.002, help='learning rate')
